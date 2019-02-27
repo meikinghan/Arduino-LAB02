@@ -1,0 +1,93 @@
+const byte startPin=8;
+const byte endPin=15 ;
+
+void setup()
+{
+  byte i;
+  pinMode(6,INPUT);
+  for (i=startPin; i<= endPin; i++) {
+      pinMode(i,OUTPUT);
+ 
+      }
+} 
+void loop()
+{
+  byte i;
+  if(digitalRead(6))
+  {
+    
+
+    for (i=endPin; i>=startPin; i--) {
+     digitalWrite(i,HIGH);
+     delay (200);
+     digitalWrite(i,LOW);
+     delay (200); 
+
+     }
+
+      for (i=startPin; i<= endPin; i++) {
+      digitalWrite(i,HIGH);
+      delay (200);
+      digitalWrite(i,LOW);
+      delay (200); 
+ 
+      }
+  }
+  else
+  {
+    for (i=startPin; i<= endPin; i++) {
+      digitalWrite(i,HIGH);
+ }
+ delay (200); 
+  for (i=startPin; i<= endPin; i++) {
+    digitalWrite(i,LOW);
+ } 
+  delay (200); 
+  for (i=startPin; i<= endPin; i++) {
+    digitalWrite(i,HIGH);
+ }
+  delay (200); 
+ 
+  for (i=startPin; i<= endPin; i++) {
+    digitalWrite(i,LOW);
+ } 
+  delay (200); 
+  
+  for (i=endPin; i>=startPin; i--) {
+    digitalWrite(i,HIGH);
+    delay (200);
+    digitalWrite(i,LOW);
+    delay (200);
+
+  }
+
+  
+ 
+  for (i=startPin; i<= endPin; i++) {
+    digitalWrite(i,HIGH);
+ }
+ delay (200); 
+ for (i=startPin; i<= endPin; i++) {
+   digitalWrite(i,LOW);
+ } 
+  delay (200); 
+  for (i=startPin; i<= endPin; i++) {
+    digitalWrite(i,HIGH);
+ }
+ delay (200);
+  for (i=startPin; i<= endPin; i++) {
+    digitalWrite(i,LOW);
+ } 
+  delay (200); 
+
+
+  for (i=startPin; i<= endPin; i++) {
+    digitalWrite(i,HIGH);
+    delay (200);
+    digitalWrite(i,LOW);
+    delay (200); 
+  }
+  
+
+}
+} 

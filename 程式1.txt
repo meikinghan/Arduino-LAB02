@@ -1,0 +1,35 @@
+const byte startPin = 8;
+const byte endPin = 15;
+
+void setup() {
+
+	for (byte i = startPin; i<= endPin; i++) {
+		pinMode(i, OUTPUT);
+}
+
+}
+void loop()
+{
+	byte i;
+ 
+	for (i=startPin; i<= endPin; i++) {
+		digitalWrite(i,HIGH);
+	}
+
+  	for (i=endPin; i>=startPin; i--) {
+		digitalWrite(i,LOW);
+ 		delay (200);
+  		digitalWrite(i,HIGH);
+ 		delay (200); 
+
+	}
+
+	for (i=startPin; i<= endPin; i++) {
+		digitalWrite(i,LOW);
+ 		delay (200);
+  		digitalWrite(i,HIGH);
+ 		delay (200); 
+ 
+	}
+
+}
